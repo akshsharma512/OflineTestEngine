@@ -1,0 +1,46 @@
+<html ng-app="demo">
+
+<head>
+    <title>TEST ENGINE</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="1angular.min.js"></script>
+    <script src="base.js"></script>
+    <script src="func.js"></script>
+    <script src="timer.js"></script>
+</head>
+
+<body onload=Timer()>
+   
+<div id="timer" style="position:fixed; text-align:left" > </div>
+   <br>
+<div id="status" style="position:fixed; text-align:right">User is online</div>
+
+       <div id="txt" class="fin" ng-controller="Hello">
+        <form name="form">
+            <div id="getin" ng-repeat="x in question">
+                <br> {{question[$index]}}
+                <br>
+                <input type='radio' id="{{anso[$index]}}" name="{{$index}}" value="{{anso[$index]}}"> {{anso[$index]}}
+                <br>
+                <input type='radio' id="{{anso[$index+1]}}" name="{{$index}}" value="{{anso[$index+1]}}"> {{anso[$index+1]}}
+                <br>
+                <input type='radio' id="{{anso[$index+2]}}" name="{{$index}}" value="{{anso[$index+2]}}"> {{anso[$index+2]}}
+                <br>
+                <input type='radio' id="{{anso[$index+3]}}" name="{{$index}}" value="{{anso[$index+3]}}"> {{anso[$index+3]}}
+                <br>
+            </div>
+        </form>
+
+        <textarea id="hide" style="display:none;">hello</textarea>
+
+    </div>
+    
+    <form id="minus" ng-submit="submit()" ng-controller="upload">
+        Enter Email Id, Name and Roll Number separated by coma(",")
+        <input type="text" ng-model="text" name="text" />
+        <input type="submit" id="submit" value="Submit" />
+    </form>
+
+</body>
+
+</html>

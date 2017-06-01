@@ -1,0 +1,9 @@
+{
+    "_id": {
+        "$oid": "585941bcf36d2873dac63700"
+    },
+    "log": {
+        "user": "takemytest",
+        "pass": "somepass"
+    }
+}
